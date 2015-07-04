@@ -1,0 +1,45 @@
+<html>
+<head>
+<link href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="row">
+	<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		 <div class="navbar-header">
+      			<a class="navbar-brand" href="#">Zomato</a>
+		 </div>
+    		 <div>
+      		    <ul class="nav navbar-nav">
+        		<li class="active"><a href="#">Home</a></li>
+        		<li><a href="#">About</a></li>
+      		    </ul>
+    		</div>
+  	</div>
+	</nav>
+</div>
+<div class="row">
+ <div class="jumbotron">
+    <h1>{{restra_info.name}}</h1>
+    <p>{{restra_info.location}}</p>
+  </div>
+
+</div>
+<div class="row">
+
+
+{% for i in restra_info.menu %}
+  <div class="col-sm-8 col-md-8">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>{{i.item}} <span class="label label-default">{{i.price}} RS</span></h3>
+      </div>
+      </div>	
+  </div>
+<!--end of tab-->
+
+{% endfor %}
+
+</div>
+</body>
+</html>
