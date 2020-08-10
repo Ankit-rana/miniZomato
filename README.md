@@ -1,3 +1,3 @@
-# mongoDB-based-miniZomato
-this is a flask based website working with mongoDB
+# miniZomato
+this is a zomato clone using flask and mongoDB
 
